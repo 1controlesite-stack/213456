@@ -6,13 +6,14 @@ const FinalCTA = () => {
   return (
     <section className="bg-primary py-20 md:py-28" aria-labelledby="cta-heading">
       <div className="container text-center">
+        <p className="font-amoresa text-lg text-gold">Próximo passo</p>
         <h2
           id="cta-heading"
-          className="font-serif text-3xl font-semibold text-primary-foreground md:text-4xl"
+          className="mt-2 font-serif text-3xl font-semibold text-primary-foreground md:text-4xl"
         >
           Pronta para transformar sua prática terapêutica?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base text-primary-foreground/75 md:text-lg">
+        <p className="mx-auto mt-4 max-w-xl text-base text-primary-foreground/70 md:text-lg">
           Entre em contato pelo WhatsApp e descubra a formação ideal para sua jornada profissional.
         </p>
         <Button
