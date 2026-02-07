@@ -17,9 +17,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className="sticky top-0 z-40 border-b border-border bg-primary text-primary-foreground">
       <nav className="container flex h-16 items-center justify-between" aria-label="Navegação principal">
-        <Link to="/" className="font-serif text-xl font-semibold tracking-tight text-foreground">
+        <Link to="/" className="font-serif text-xl font-semibold tracking-tight">
           Célia Franz
         </Link>
 
@@ -30,10 +30,10 @@ const Header = () => {
               <Link
                 to={link.to}
                 className={cn(
-                  "rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground",
+                  "rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   location.pathname === link.to
-                    ? "bg-accent text-accent-foreground"
-                    : "text-muted-foreground"
+                    ? "bg-primary-foreground/15 text-primary-foreground"
+                    : "text-primary-foreground/70 hover:bg-primary-foreground/10 hover:text-primary-foreground"
                 )}
               >
                 {link.label}
@@ -44,7 +44,7 @@ const Header = () => {
 
         {/* Mobile toggle */}
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-foreground md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-primary-foreground md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={mobileOpen}
@@ -55,7 +55,7 @@ const Header = () => {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="border-t border-border bg-background md:hidden">
+        <div className="border-t border-primary-foreground/10 bg-primary md:hidden">
           <ul className="container flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
               <li key={link.to}>
@@ -63,10 +63,10 @@ const Header = () => {
                   to={link.to}
                   onClick={() => setMobileOpen(false)}
                   className={cn(
-                    "block rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent",
+                    "block rounded-md px-3 py-2 text-sm font-medium transition-colors",
                     location.pathname === link.to
-                      ? "bg-accent text-accent-foreground"
-                      : "text-muted-foreground"
+                      ? "bg-primary-foreground/15 text-primary-foreground"
+                      : "text-primary-foreground/70 hover:bg-primary-foreground/10 hover:text-primary-foreground"
                   )}
                 >
                   {link.label}

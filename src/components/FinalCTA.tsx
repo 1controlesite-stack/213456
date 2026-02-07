@@ -12,14 +12,13 @@ const FinalCTA = () => {
         >
           Pronta para transformar sua prática terapêutica?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base text-primary-foreground/80 md:text-lg">
+        <p className="mx-auto mt-4 max-w-xl text-base text-primary-foreground/75 md:text-lg">
           Entre em contato pelo WhatsApp e descubra a formação ideal para sua jornada profissional.
         </p>
         <Button
           asChild
           size="lg"
-          variant="secondary"
-          className="mt-8 gap-2"
+          className="mt-8 gap-2 bg-gold text-gold-foreground hover:bg-gold/90"
         >
           <a
             href={getWhatsAppLink()}
