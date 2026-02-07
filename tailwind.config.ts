@@ -17,6 +17,7 @@ export default {
         sans: ["'Noto Serif Bengali'", "Georgia", "serif"],
         serif: ["'Noto Serif Display'", "Georgia", "serif"],
         display: ["'Noto Serif Display'", "Georgia", "serif"],
+        amoresa: ["'Amoresa'", "'Noto Serif Display'", "Georgia", "serif"],
         body: ["'Noto Serif Bengali'", "Georgia", "serif"],
       },
       colors: {

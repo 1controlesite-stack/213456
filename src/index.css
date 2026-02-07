@@ -2,93 +2,124 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+Bengali:wght@300;0,400;0,500;0,600;0,700&display=swap');
+/* Amoresa — decorative serif for initials / display accents */
+@font-face {
+  font-family: 'Amoresa';
+  src: url('/fonts/Amoresa-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Noto+Serif+Bengali:wght@300;400;500;600;700&display=swap');
+
+/*
+  BRAND PALETTE (reference)
+  Purple deep:  #321649 → hsl(275 55% 18%)
+  Gold muted:   #958049 → hsl(43 33% 43%)
+  White:        #FFFFFF
+
+  WCAG NOTES
+  – Purple #321649 on white  → ~12:1 ✓ AAA
+  – White on #321649          → ~12:1 ✓ AAA
+  – Gold #958049 on white     → ~3.2:1 ✗ too low for body text
+  – Gold on #321649           → ~3.8:1 ✓ AA large only
+  → Gold is used ONLY for decorative accents, buttons (large text), 
+    and UI elements — NEVER for body copy on light backgrounds.
+  – Body text uses a softened purple-charcoal for comfortable reading.
+*/
 
 @layer base {
   :root {
+    /* Surfaces */
     --background: 0 0% 100%;
-    --foreground: 270 52% 18%;
+    --foreground: 275 30% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 270 52% 18%;
+    --card-foreground: 275 30% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 270 52% 18%;
+    --popover-foreground: 275 30% 20%;
 
-    --primary: 270 52% 18%;
+    /* Primary = deep purple — used sparingly (header, footer, hero) */
+    --primary: 275 55% 18%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 43 30% 93%;
-    --secondary-foreground: 270 52% 18%;
+    /* Secondary = warm cream for alternating sections */
+    --secondary: 38 30% 96%;
+    --secondary-foreground: 275 30% 20%;
 
-    --muted: 43 20% 93%;
-    --muted-foreground: 270 30% 35%;
+    /* Muted = softer tones for less emphasis */
+    --muted: 38 18% 93%;
+    --muted-foreground: 275 15% 40%;
 
-    --accent: 43 35% 43%;
+    /* Accent = gold — buttons, decorative highlights */
+    --accent: 43 33% 43%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 43 20% 85%;
-    --input: 43 20% 85%;
-    --ring: 270 52% 18%;
+    --border: 38 15% 88%;
+    --input: 38 15% 88%;
+    --ring: 275 55% 18%;
 
     --radius: 0.375rem;
 
     --whatsapp: 142 70% 36%;
     --whatsapp-foreground: 0 0% 100%;
 
-    --gold: 43 35% 43%;
+    --gold: 43 33% 43%;
     --gold-foreground: 0 0% 100%;
 
-    --sidebar-background: 270 52% 12%;
+    /* Sidebar (reuses brand) */
+    --sidebar-background: 275 55% 14%;
     --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 43 35% 43%;
+    --sidebar-primary: 43 33% 43%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 270 40% 22%;
+    --sidebar-accent: 275 40% 22%;
     --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 270 40% 25%;
-    --sidebar-ring: 43 35% 43%;
+    --sidebar-border: 275 40% 25%;
+    --sidebar-ring: 43 33% 43%;
   }
 
   .dark {
-    --background: 270 52% 8%;
-    --foreground: 0 0% 95%;
+    --background: 275 45% 7%;
+    --foreground: 38 20% 92%;
 
-    --card: 270 45% 12%;
-    --card-foreground: 0 0% 95%;
+    --card: 275 40% 10%;
+    --card-foreground: 38 20% 92%;
 
-    --popover: 270 45% 12%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 275 40% 10%;
+    --popover-foreground: 38 20% 92%;
 
-    --primary: 43 35% 50%;
-    --primary-foreground: 270 52% 10%;
+    --primary: 43 33% 50%;
+    --primary-foreground: 275 55% 10%;
 
-    --secondary: 270 35% 18%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 275 30% 15%;
+    --secondary-foreground: 38 20% 92%;
 
-    --muted: 270 30% 18%;
-    --muted-foreground: 270 15% 60%;
+    --muted: 275 25% 16%;
+    --muted-foreground: 275 12% 58%;
 
-    --accent: 43 35% 43%;
+    --accent: 43 33% 43%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62% 30%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 270 30% 22%;
-    --input: 270 30% 22%;
-    --ring: 43 35% 50%;
+    --border: 275 25% 20%;
+    --input: 275 25% 20%;
+    --ring: 43 33% 50%;
 
-    --sidebar-background: 270 52% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 43 35% 50%;
-    --sidebar-primary-foreground: 270 52% 10%;
-    --sidebar-accent: 270 35% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 270 30% 18%;
-    --sidebar-ring: 43 35% 50%;
+    --sidebar-background: 275 45% 7%;
+    --sidebar-foreground: 38 20% 92%;
+    --sidebar-primary: 43 33% 50%;
+    --sidebar-primary-foreground: 275 55% 10%;
+    --sidebar-accent: 275 30% 13%;
+    --sidebar-accent-foreground: 38 20% 92%;
+    --sidebar-border: 275 25% 18%;
+    --sidebar-ring: 43 33% 50%;
   }
 }
 
@@ -105,4 +136,9 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Noto Serif Display', Georgia, serif;
   }
+}
+
+/* Utility class for Amoresa decorative initial */
+.font-amoresa {
+  font-family: 'Amoresa', 'Noto Serif Display', Georgia, serif;
 }

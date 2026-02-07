@@ -17,9 +17,9 @@ const Header = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 border-b border-border bg-primary text-primary-foreground">
+    <header className="sticky top-0 z-40 border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85">
       <nav className="container flex h-16 items-center justify-between" aria-label="Navegação principal">
-        <Link to="/" className="font-serif text-xl font-semibold tracking-tight">
+        <Link to="/" className="font-amoresa text-2xl tracking-wide text-primary">
           Célia Franz
         </Link>
 
@@ -32,8 +32,8 @@ const Header = () => {
                 className={cn(
                   "rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   location.pathname === link.to
-                    ? "bg-primary-foreground/15 text-primary-foreground"
-                    : "text-primary-foreground/70 hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-primary"
                 )}
               >
                 {link.label}
@@ -44,7 +44,7 @@ const Header = () => {
 
         {/* Mobile toggle */}
         <button
-          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-primary-foreground md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-md text-primary md:hidden"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
           aria-expanded={mobileOpen}
@@ -55,7 +55,7 @@ const Header = () => {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="border-t border-primary-foreground/10 bg-primary md:hidden">
+        <div className="border-t border-border/50 bg-background md:hidden">
           <ul className="container flex flex-col gap-1 py-4">
             {navLinks.map((link) => (
               <li key={link.to}>
@@ -65,8 +65,8 @@ const Header = () => {
                   className={cn(
                     "block rounded-md px-3 py-2 text-sm font-medium transition-colors",
                     location.pathname === link.to
-                      ? "bg-primary-foreground/15 text-primary-foreground"
-                      : "text-primary-foreground/70 hover:bg-primary-foreground/10 hover:text-primary-foreground"
+                      ? "text-primary"
+                      : "text-muted-foreground hover:text-primary"
                   )}
                 >
                   {link.label}

@@ -8,21 +8,21 @@ const Footer = () => {
         <div className="grid gap-8 md:grid-cols-3">
           {/* Brand */}
           <div>
-            <p className="font-serif text-lg font-semibold">Célia Franz</p>
-            <p className="mt-2 text-sm leading-relaxed text-primary-foreground/70">
+            <p className="font-amoresa text-2xl tracking-wide">Célia Franz</p>
+            <p className="mt-3 text-sm leading-relaxed text-primary-foreground/65">
               Terapeuta integrativa e educadora. Formações avançadas para terapeutas que buscam profundidade e método.
             </p>
           </div>
 
           {/* Nav */}
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-gold">Formações</p>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-gold">Formações</p>
             <ul className="flex flex-col gap-2">
               {themeOrder.map((key) => (
                 <li key={key}>
                   <Link
                     to={`/${themes[key].slug}`}
-                    className="text-sm text-primary-foreground/70 transition-colors hover:text-gold"
+                    className="text-sm text-primary-foreground/65 transition-colors hover:text-primary-foreground"
                   >
                     {themes[key].title}
                   </Link>
@@ -33,15 +33,15 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-gold">Contato</p>
-            <p className="text-sm text-primary-foreground/70">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.15em] text-gold">Contato</p>
+            <p className="text-sm text-primary-foreground/65">
               Entre em contato pelo WhatsApp para informações sobre cursos, eventos e agendamentos.
             </p>
           </div>
         </div>
 
         <div className="mt-10 border-t border-primary-foreground/10 pt-6 text-center">
-          <p className="text-xs text-primary-foreground/50">
+          <p className="text-xs text-primary-foreground/40">
             © {new Date().getFullYear()} Célia Franz. Todos os direitos reservados.
           </p>
         </div>

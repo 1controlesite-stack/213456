@@ -50,12 +50,14 @@ const ThemePageLayout = ({ theme }: ThemePageLayoutProps) => {
       />
 
       {/* Hero */}
-      <section className="bg-primary py-20 text-primary-foreground md:py-28">
+      <section className="bg-secondary py-20 md:py-28">
+        <div className="absolute left-0 top-0 h-0.5 w-full bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
         <div className="container">
-          <h1 className="font-serif text-4xl font-semibold md:text-5xl">
+          <p className="font-amoresa text-lg text-gold">{theme.shortTitle}</p>
+          <h1 className="mt-2 font-serif text-4xl font-semibold text-primary md:text-5xl">
             {theme.title}
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-primary-foreground/75">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {theme.introduction}
           </p>
         </div>
