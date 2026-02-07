@@ -14,8 +14,10 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["'DM Sans'", "system-ui", "sans-serif"],
-        serif: ["'Playfair Display'", "Georgia", "serif"],
+        sans: ["'Noto Serif Bengali'", "Georgia", "serif"],
+        serif: ["'Noto Serif Display'", "Georgia", "serif"],
+        display: ["'Noto Serif Display'", "Georgia", "serif"],
+        body: ["'Noto Serif Bengali'", "Georgia", "serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -54,6 +56,10 @@ export default {
         whatsapp: {
           DEFAULT: "hsl(var(--whatsapp))",
           foreground: "hsl(var(--whatsapp-foreground))",
+        },
+        gold: {
+          DEFAULT: "hsl(var(--gold))",
+          foreground: "hsl(var(--gold-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
