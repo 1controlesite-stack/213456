@@ -17,12 +17,12 @@ const ThemeSection = ({ theme, index }: ThemeSectionProps) => {
       aria-labelledby={`theme-${theme.slug}`}
     >
       <div className="container">
-        <div className={cn("grid items-start gap-10 md:grid-cols-10")}>
-          {/* Image — 70% or 30% */}
+        {/* Theme header — alternating layout */}
+        <div className={cn("grid items-center gap-10 md:grid-cols-10")}>
           <div
             className={cn(
-              "md:col-span-7",
-              isReversed && "md:order-2 md:col-start-4 md:col-span-7"
+              "md:col-span-6",
+              isReversed && "md:order-2 md:col-start-5 md:col-span-6"
             )}
           >
             <div className="aspect-[16/9] w-full overflow-hidden rounded-lg bg-muted">
@@ -35,11 +35,10 @@ const ThemeSection = ({ theme, index }: ThemeSectionProps) => {
             </div>
           </div>
 
-          {/* Content — 30% or 70% */}
           <div
             className={cn(
-              "flex flex-col justify-center md:col-span-3",
-              isReversed && "md:order-1 md:col-start-1 md:col-span-3"
+              "flex flex-col justify-center md:col-span-4",
+              isReversed && "md:order-1 md:col-start-1 md:col-span-4"
             )}
           >
             <h2
@@ -51,29 +50,46 @@ const ThemeSection = ({ theme, index }: ThemeSectionProps) => {
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               {theme.description}
             </p>
-
-            <ul className="mt-6 space-y-2">
-              {theme.courses.map((course) => (
-                <li key={course.id}>
-                  <Link
-                    to={`/${theme.slug}#${course.id}`}
-                    className="group flex items-center gap-2 text-sm font-medium text-primary transition-colors hover:text-primary/80"
-                  >
-                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                    {course.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
             <Link
               to={`/${theme.slug}`}
-              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
             >
               Ver todas as formações
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
+        </div>
+
+        {/* Course cards grid */}
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {theme.courses.map((course) => (
+            <Link
+              key={course.id}
+              to={`/${theme.slug}#${course.id}`}
+              className="group overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md"
+            >
+              <div className="aspect-[16/10] w-full overflow-hidden bg-muted">
+                <img
+                  src="/placeholder.svg"
+                  alt={`Capa do curso ${course.title}`}
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="font-serif text-base font-semibold leading-snug text-foreground md:text-lg">
+                  {course.title}
+                </h3>
+                <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                  {course.overview}
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-primary transition-colors group-hover:text-primary/80">
+                  Saiba mais
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
