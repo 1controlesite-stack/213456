@@ -37,7 +37,7 @@ export const themes: Record<string, ThemeData> = {
     title: "Homeopatia",
     shortTitle: "Homeopatia",
     description:
-      "Formações avançadas em homeopatia que exploram desde os Lantanídeos até as camadas energéticas da consciência, unindo neurociência, psicossomática e sensibilidade clínica refinada.",
+      "Formações avançadas em estratégias homeopáticas:\nIntegração das neurociências e da neuroespiritualidade à base homeopática, para a compreensão profunda do sofrimento psíquico específico da nossa era atual.\n\nCapacitamos o terapeuta homeopata a realizar uma leitura clínica assertiva, tratando pessoas e não apenas sintomas.",
     introduction:
       "A homeopatia vai além do sintoma. Nesta linha de formações, você mergulha em abordagens avançadas que conectam o remédio homeopático à história profunda do indivíduo — seus vínculos, suas heranças e sua jornada de individuação. Cada curso foi estruturado para terapeutas que desejam ampliar sua leitura clínica com profundidade, método e rigor científico contemporâneo.",
     seo: {
