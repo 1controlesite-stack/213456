@@ -5,6 +5,7 @@ import SEOHead from "@/components/SEOHead";
 import Layout from "@/components/Layout";
 import CourseBlock from "@/components/CourseBlock";
 import FinalCTA from "@/components/FinalCTA";
+import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 interface ThemePageLayoutProps {
   theme: ThemeData;
@@ -12,6 +13,7 @@ interface ThemePageLayoutProps {
 
 const ThemePageLayout = ({ theme }: ThemePageLayoutProps) => {
   const { hash } = useLocation();
+  const heroReveal = useScrollReveal({ threshold: 0.1 });
 
   useEffect(() => {
     if (hash) {
@@ -50,13 +52,18 @@ const ThemePageLayout = ({ theme }: ThemePageLayoutProps) => {
       />
 
       {/* Hero */}
-      <section className="bg-secondary py-20 md:py-28">
-        <div className="absolute left-0 top-0 h-0.5 w-full bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-        <div className="container">
-          <p className="font-amoresa text-lg text-gold">{theme.shortTitle}</p>
+      <section className="relative bg-secondary py-20 md:py-28 overflow-hidden">
+        <div className="absolute left-0 top-0 h-1 w-full bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
+        <div className="pointer-events-none absolute -right-32 -top-32 h-64 w-64 rounded-full bg-gold/[0.05] blur-3xl" />
+        <div
+          ref={heroReveal.ref}
+          className={`container relative reveal ${heroReveal.isVisible ? "visible" : ""}`}
+        >
+          <p className="font-amoresa text-xl text-gold">{theme.shortTitle}</p>
           <h1 className="mt-2 font-serif text-4xl font-semibold text-primary md:text-5xl">
             {theme.title}
           </h1>
+          <div className="gold-divider mt-4 w-24" />
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {theme.introduction}
           </p>
