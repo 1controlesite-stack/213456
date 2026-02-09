@@ -1,22 +1,14 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import BiographyModal from "@/components/BiographyModal";
-
 const AboutSection = () => {
   const [modalOpen, setModalOpen] = useState(false);
-
-  return (
-    <section className="py-20 md:py-28" aria-labelledby="sobre-heading">
+  return <section className="py-20 md:py-28" aria-labelledby="sobre-heading">
       <div className="container">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="flex justify-center md:order-1">
             <div className="aspect-[3/4] w-full max-w-sm overflow-hidden rounded-lg border border-border bg-muted">
-              <img
-                src="/placeholder.svg"
-                alt="Retrato profissional de Célia Franz"
-                className="h-full w-full object-cover"
-                loading="lazy"
-              />
+              <img src="/placeholder.svg" alt="Retrato profissional de Célia Franz" className="h-full w-full object-cover" loading="lazy" />
             </div>
           </div>
 
@@ -26,13 +18,9 @@ const AboutSection = () => {
               Célia Franz
             </h2>
             <p className="mt-6 text-base leading-relaxed text-muted-foreground md:text-lg">
-              Terapeuta integrativa e educadora com aproximadamente 30 anos de experiência clínica dedicados à formação de terapeutas. Célia desenvolveu a metodologia Caminho das Riquezas, unindo rigor técnico, sensibilidade clínica e respeito às raízes do saber humano ancestral.
+              Neuropsicanalista integrativa e educadora com aproximadamente 30 anos de experiência clínica dedicados à formação de terapeutas. Célia desenvolveu a metodologia Caminho das Riquezas, unindo rigor técnico, sensibilidade clínica e respeito às raízes do saber humano ancestral.
             </p>
-            <Button
-              variant="outline"
-              className="mt-6 border-primary/20 text-primary hover:bg-primary/5"
-              onClick={() => setModalOpen(true)}
-            >
+            <Button variant="outline" className="mt-6 border-primary/20 text-primary hover:bg-primary/5" onClick={() => setModalOpen(true)}>
               Ler biografia completa
             </Button>
           </div>
@@ -40,8 +28,6 @@ const AboutSection = () => {
       </div>
 
       <BiographyModal open={modalOpen} onOpenChange={setModalOpen} />
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
