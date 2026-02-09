@@ -12,6 +12,9 @@ interface CourseBlockProps {
 const CourseBlock = ({ course }: CourseBlockProps) => {
   const reveal = useScrollReveal({ threshold: 0.08 });
 
+  const vagaLink = course.linkVaga || getWhatsAppLink(course.title);
+  const contatoLink = course.linkContato || getWhatsAppLink(course.title);
+
   return (
     <article
       id={course.id}
@@ -111,7 +114,7 @@ const CourseBlock = ({ course }: CourseBlockProps) => {
                 className="w-full gap-2 bg-accent text-accent-foreground shadow-md shadow-accent/15 hover:bg-accent/90 hover:shadow-lg hover:shadow-accent/25 transition-all duration-300"
               >
                 <a
-                  href={getWhatsAppLink(course.title)}
+                  href={vagaLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -121,7 +124,7 @@ const CourseBlock = ({ course }: CourseBlockProps) => {
               </Button>
 
               <a
-                href={getWhatsAppLink(course.title)}
+                href={contatoLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-1.5 text-xs text-muted-foreground transition-colors hover:text-primary"

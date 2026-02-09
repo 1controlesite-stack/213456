@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { ThemeData, SITE_URL } from "@/data/courses";
 import SEOHead from "@/components/SEOHead";
 import Layout from "@/components/Layout";
-import CourseBlock from "@/components/CourseBlock";
 import FinalCTA from "@/components/FinalCTA";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
@@ -21,6 +21,7 @@ const seoKeywords: Record<string, string> = {
 const ThemePageLayout = ({ theme }: ThemePageLayoutProps) => {
   const { hash } = useLocation();
   const heroReveal = useScrollReveal({ threshold: 0.1 });
+  const cardsReveal = useScrollReveal({ threshold: 0.08 });
 
   useEffect(() => {
     if (hash) {
@@ -75,12 +76,57 @@ const ThemePageLayout = ({ theme }: ThemePageLayoutProps) => {
         </div>
       </section>
 
-      {/* Courses */}
+      {/* Course cards grid */}
       <section className="py-16 md:py-24" aria-label="Lista de cursos">
         <div className="container">
-          <div className="divide-y divide-border">
+          <div
+            ref={cardsReveal.ref}
+            className={`grid gap-6 sm:grid-cols-2 lg:grid-cols-3 reveal-stagger ${cardsReveal.isVisible ? "visible" : ""}`}
+          >
             {theme.courses.map((course) => (
-              <CourseBlock key={course.id} course={course} />
+              <Link
+                key={course.id}
+                to={`/${theme.slug}/${course.id}`}
+                className="card-lift group overflow-hidden rounded-lg border border-border bg-card"
+              >
+                <div className="relative aspect-square w-full overflow-hidden bg-muted">
+                  {course.image ? (
+                    <>
+                      <img
+                        src={course.image}
+                        alt=""
+                        className="absolute inset-0 h-full w-full scale-110 object-cover blur-xl opacity-60"
+                        aria-hidden="true"
+                      />
+                      <img
+                        src={course.image}
+                        alt={`Capa do curso ${course.title}`}
+                        className="relative h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+                        loading="lazy"
+                      />
+                    </>
+                  ) : (
+                    <img
+                      src="/placeholder.svg"
+                      alt={`Capa do curso ${course.title}`}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                    />
+                  )}
+                </div>
+                <div className="p-5">
+                  <h3 className="font-serif text-base font-semibold leading-snug text-primary md:text-lg">
+                    {course.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
+                    {course.overview}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-accent transition-all group-hover:text-accent/80 group-hover:gap-2.5">
+                    Saiba mais
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </Link>
             ))}
           </div>
         </div>
