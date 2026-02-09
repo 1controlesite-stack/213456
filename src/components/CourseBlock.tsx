@@ -15,7 +15,7 @@ const CourseBlock = ({ course }: CourseBlockProps) => {
     <article
       id={course.id}
       ref={reveal.ref}
-      className={`scroll-mt-24 py-12 first:pt-0 reveal ${reveal.isVisible ? "visible" : ""}`}
+      className={`scroll-mt-24 py-12 first:pt-0 reveal-left ${reveal.isVisible ? "visible" : ""}`}
     >
       <div className="grid gap-8 md:grid-cols-3">
         {/* Main content */}

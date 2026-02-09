@@ -41,7 +41,7 @@ const ThemeSection = ({ theme, index }: ThemeSectionProps) => {
             className={cn(
               "md:col-span-6",
               isReversed && "md:order-2 md:col-start-5 md:col-span-6",
-              isReversed ? "reveal-right" : "reveal-left",
+              isReversed ? "reveal-left" : "reveal-right",
               headerReveal.isVisible && "visible"
             )}
           >
@@ -59,7 +59,7 @@ const ThemeSection = ({ theme, index }: ThemeSectionProps) => {
             className={cn(
               "flex flex-col justify-center md:col-span-4",
               isReversed && "md:order-1 md:col-start-1 md:col-span-4",
-              isReversed ? "reveal-left" : "reveal-right",
+              isReversed ? "reveal-right" : "reveal-left",
               headerReveal.isVisible && "visible"
             )}
           >

@@ -48,7 +48,7 @@ const Header = () => {
               <Link
                 to={link.to}
                 className={cn(
-                  "gold-underline rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                  "gold-underline rounded-md px-3 py-2 text-sm font-medium transition-all duration-300",
                   location.pathname === link.to
                     ? "text-primary"
                     : "text-muted-foreground hover:text-primary"
