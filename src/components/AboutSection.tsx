@@ -8,7 +8,7 @@ const AboutSection = () => {
         <div className="grid items-center gap-12 md:grid-cols-2">
           <div className="flex justify-center md:order-1">
             <div className="aspect-[3/4] w-full max-w-sm overflow-hidden rounded-lg border border-border bg-muted">
-              <img src="/placeholder.svg" alt="Retrato profissional de Célia Franz" className="h-full w-full object-cover" loading="lazy" />
+              <img alt="Retrato profissional de Célia Franz" className="h-full w-full object-cover" loading="lazy" src="/lovable-uploads/cbf167ff-e9cd-41ce-9211-0ca3a1007712.jpg" />
             </div>
           </div>
 

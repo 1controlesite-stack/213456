@@ -28,7 +28,7 @@ const HeroSection = () => {
 
           <div className="flex items-center justify-center">
             <div className="aspect-[4/5] w-full max-w-md overflow-hidden rounded-lg border border-border bg-muted">
-              <img src="/placeholder.svg" alt="Célia Franz — terapeuta e educadora em formações avançadas" className="h-full w-full object-cover" loading="eager" />
+              <img alt="Célia Franz — terapeuta e educadora em formações avançadas" className="h-full w-full object-cover" loading="eager" src="/lovable-uploads/4d2ce723-795f-4abf-a5b1-353f21613c99.jpg" />
             </div>
           </div>
         </div>
