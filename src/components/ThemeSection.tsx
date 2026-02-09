@@ -38,8 +38,15 @@ const ThemeSection = ({
         {/* Course cards grid */}
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {theme.courses.map(course => <Link key={course.id} to={`/${theme.slug}#${course.id}`} className="group overflow-hidden rounded-lg border border-border bg-card transition-shadow hover:shadow-md">
-              <div className="aspect-[16/10] w-full overflow-hidden bg-muted">
-                <img src="/placeholder.svg" alt={`Capa do curso ${course.title}`} className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105" loading="lazy" />
+              <div className="relative aspect-square w-full overflow-hidden bg-muted">
+                {course.image ? (
+                  <>
+                    <img src={course.image} alt="" className="absolute inset-0 h-full w-full scale-110 object-cover blur-xl opacity-60" aria-hidden="true" />
+                    <img src={course.image} alt={`Capa do curso ${course.title}`} className="relative h-full w-full object-contain" loading="lazy" />
+                  </>
+                ) : (
+                  <img src="/placeholder.svg" alt={`Capa do curso ${course.title}`} className="h-full w-full object-cover" loading="lazy" />
+                )}
               </div>
               <div className="p-5">
                 <h3 className="font-serif text-base font-semibold leading-snug text-primary md:text-lg">
