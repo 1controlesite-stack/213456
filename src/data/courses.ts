@@ -11,6 +11,7 @@ export function getWhatsAppLink(courseName?: string) {
 export interface Course {
   id: string;
   title: string;
+  image?: string;
   overview: string;
   audience: string;
   learnings: string[];
@@ -49,6 +50,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "lantanideos",
         title: "Lantanídeos",
+        image: "/images/courses/lantanideos.png",
         overview:
           "Vivemos uma era de aceleração silenciosa. As pessoas não estão apenas cansadas — estão mentalmente exauridas. Pensamentos que não desligam, mentes que não descansam nem durante o sono, corpos que adoecem como consequência direta desse excesso de atividade psíquica. Ansiedade crônica, TDAH, TDA, hiperfoco, superdotação, altas habilidades, enxaquecas por esforço mental, doenças autoimunes sem causa aparente e a sensação constante de estar \"ligado demais\" tornaram-se queixas comuns nos consultórios. É nesse cenário que os lantanídeos se revelam como os medicamentos homeopáticos mais alinhados com o sofrimento psíquico da era contemporânea. Eles atuam no eixo da autonomia, do autocontrole e da reorganização profunda do self.",
         audience:
@@ -85,6 +87,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "miasmas",
         title: "Miasmas – Herança Impressa no SER Humano",
+        image: "/images/courses/miasmas.png",
         overview:
           "Nos campos invisíveis da hereditariedade energética e psíquica revela-se a arquitetura profunda dos miasmas — forças ancestrais que atravessam gerações e se imprimem no ser humano como padrões de emoções, predisposições, repetições inconscientes e estados de adoecimento. Os miasmas são heranças impressas que vêm da ancestralidade, carregando a memória viva de histórias não resolvidas, conflitos silenciados, traumas antigos e adaptações extremas à sobrevivência. Reconhecer o miasma que rege os desequilíbrios de um indivíduo é como decifrar a assinatura vibracional de sua história mais profunda — acessar a matriz invisível que sustenta sintomas físicos, padrões emocionais recorrentes e estados mentais cristalizados.",
         audience:
@@ -103,6 +106,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "lacs",
         title: "Homeopatia dos Vínculos Feridos – Método Lac's",
+        image: "/images/courses/lacs.png",
         overview:
           "Este curso foi criado para terapeutas que compreendem que os maiores bloqueios da vida adulta não se originam no presente, mas nos vínculos primários não resolvidos, especialmente aqueles estabelecidos no sistema familiar. A Homeopatia dos Vínculos Feridos é um campo altamente especializado da homeopatia contemporânea, fundamentado nos medicamentos oriundos do leite animal (os Lac's), cuja assinatura terapêutica atua diretamente sobre vínculos familiares adoecidos, emaranhamentos sistêmicos invisíveis, lealdades inconscientes, engramas emocionais profundos e padrões repetitivos de sofrimento, escassez e autossabotagem. Os medicamentos do leite carregam a assinatura do pertencimento, da dependência, da separação, do abandono, da lealdade e da identidade familiar.",
         audience:
@@ -121,6 +125,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "portais-matridonais",
         title: "Portais Matridonais",
+        image: "/images/courses/portais-matridonais.png",
         overview:
           "A maior parte dos conflitos emocionais, relacionais e até financeiros da vida adulta não se origina na infância, mas antes dela. Ainda no período intrauterino, o sistema nervoso em formação já registra emoções, ambientes, rejeições, medos e vínculos vividos pela mãe e pelo campo familiar. Esses registros silenciosos tornam-se a base da personalidade, da forma de amar, de reagir ao mundo e de lidar com limites, proteção, pertencimento e segurança. Aqui, você aprenderá a utilizar remédios homeopáticos matridonais como líquido amniótico, placenta, cordão umbilical, vernix caseosa, foliculinum e leite materno, para restaurar registros primários da vida.",
         audience:
@@ -139,6 +144,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "assinatura-energetica",
         title: "Assinatura Energética das Sete Camadas da Consciência",
+        image: "/images/courses/assinatura-energetica.png",
         overview:
           "Este curso nasce de uma compreensão profunda e rara: não somos feitos de sintomas isolados, mas de camadas de consciência que se organizam, se desorganizam e se reorganizam ao longo da vida. Baseado nos estudos de Tinus Smits e ampliado por uma leitura contemporânea que integra neurociência, psicossomática e neuroespiritualidade, o método propõe uma transformação estrutural do indivíduo. Cada camada representa um nível específico de organização interna — desde a sobrevivência e a segurança primária, passando pela autoestima, presença, proteção emocional e identidade, até a sétima camada, onde o indivíduo reencontra sentido, unidade e coerência profunda. Este curso, por si só, já é um tratamento profundo.",
         audience:
@@ -191,6 +197,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "movimento-riquezas",
         title: "Movimento das Riquezas",
+        image: "/images/courses/movimento-riquezas.png",
         overview:
           "O Movimento das Riquezas é um método autoral criado para restaurar o fluxo natural da vida, do fluxo financeiro e da realização pessoal a partir da liberação profunda de engramas e emaranhamentos ativos nos campos mórficos e morfogenéticos. Trata-se de uma constelação avançada, precisa e altamente estruturada, que revela com clareza aquilo que está oculto no campo, sem margem para interpretações rasas ou manipulações inconscientes. O terapeuta aprende a ler movimentos, visualizar imagens mentais do campo, direções e símbolos com tal precisão que se torna impossível não enxergar o que precisa ser visto. Após a constelação reveladora, o terapeuta é treinado para aplicar técnicas avançadas de neuromodulação cerebral, reprogramação de mapas neurais e atualização de hologramas.",
         audience:
@@ -209,6 +216,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "mta",
         title: "M.T.A. – Movimento da Trilogia Arquetípica",
+        image: "/images/courses/mta.png",
         overview:
           "Em um cenário clínico cada vez mais complexo, não basta sensibilidade terapêutica — é indispensável método, estrutura e base neurocientífica. O M.T.A. nasce dessa necessidade: oferecer ao terapeuta uma técnica clara, rápida e profundamente direcionada para detectar bloqueios, travas sistêmicas e a origem real dos conflitos psíquicos e psicossomáticos. Integra constelação sistêmica, estudos contemporâneos da psiquê, Programação Neurolinguística, neurociência e neuroespiritualidade, permitindo uma leitura objetiva do campo do cliente. Em poucos movimentos, o método revela se o conflito está relacionado a vínculos feridos, experiências intrauterinas, padrões transgeracionais ou núcleos psíquicos mais profundos.",
         audience:
@@ -227,6 +235,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "oraculo-terapeuta",
         title: "Oráculo do Terapeuta",
+        image: "/images/courses/oraculo-terapeuta.png",
         overview:
           "O Oráculo do Terapeuta nasce da interseção entre os estudos contemporâneos da psiquê, a psicossomática, a leitura neuroespiritual e a linguagem simbólica que atravessa o inconsciente individual e coletivo. Não se trata de um oráculo comum nem de um baralho intuitivo genérico — foi concebido e refinado a partir da experiência clínica real. As 27 cartas formam um sistema completo de leitura e direcionamento, dialogando com camadas profundas do funcionamento psíquico e alcançando conteúdos que envolvem conflitos emocionais, padrões repetitivos, manifestações psicossomáticas, estados de exaustão mental e bloqueios existenciais que a consciência verbal não consegue organizar sozinha. O símbolo, quando bem estruturado, faz o que a mente linear não faz: atravessa defesas, suaviza resistências e cria pontes entre o consciente e o inconsciente.",
         audience:
@@ -313,6 +322,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "eventos-palestras",
         title: "Eventos: Palestras, Workshops e Aulas Gratuitas",
+        image: "/images/courses/eventos-palestras.png",
         overview:
           "Ao longo do ano, são realizadas palestras, workshops, lives e aulas gratuitas de degustação, sempre com temas amplos e atuais, sustentados por neurociência contemporânea, estudos da psiquê, leitura sistêmica, psicossomática, homeopatia avançada e uma abordagem neuroespiritual aplicada — sem misticismo vazio e sem simplificações perigosas. Cada evento é pensado para provocar insight, reposicionamento interno e ampliação de consciência. Falamos de padrões emocionais repetitivos, heranças invisíveis, vínculos que adoecem, bloqueios de prosperidade, exaustão mental, conflitos internos silenciosos e caminhos reais de reorganização. Não trabalhamos com discursos motivacionais passageiros — trabalhamos com conteúdo que atravessa, que gera desconforto produtivo, clareza e maturidade psíquica.",
         audience:
@@ -331,6 +341,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "agendamentos",
         title: "Agendamentos e Pacotes Terapêuticos",
+        image: "/images/courses/agendamentos.png",
         overview:
           "Aqui, o atendimento não começa com protocolos genéricos — começa com clareza, leitura profunda e estratégia terapêutica personalizada. Antes de qualquer escolha, você pode agendar uma consulta inicial para compreender qual pacote terapêutico é o mais adequado para o seu momento de vida. O trabalho integra estudos contemporâneos da psiquê, neurociência aplicada, leitura sistêmica familiar, psicossomática, neuroeconomia, neuroespiritualidade, recondicionamento mental e homeopatia contemporânea. Pacotes disponíveis: Caminho das Riquezas Premium (o mais completo, envolvendo ancestralidade, padrões familiares, bloqueios de prosperidade e recondicionamento), Mapa Chave Mestra (sessão única de clareza imediata) e Constelação Caminho das Riquezas (constelação ampla com sessões de recondicionamento mental).",
         audience:
