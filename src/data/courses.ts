@@ -69,6 +69,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "sais-de-schussler",
         title: "Sais de Schüssler",
+        image: "/images/courses/sais-de-schussler.png",
         overview:
           "Este não é um curso sobre sais minerais. É uma formação sobre como a vida se sustenta nos detalhes invisíveis. Os Sais de Schüssler revelam algo desconcertante: muitos estados psíquicos persistentes não se mantêm apenas por conflitos internos ou padrões inconscientes, mas porque o organismo perdeu sua capacidade microscópica de funcionar com precisão. Quando a célula perde seus microelementos essenciais, o sistema nervoso perde eficiência, a mente perde clareza, o emocional perde elasticidade — e o indivíduo passa a viver em estados de fadiga, ansiedade, rigidez ou esgotamento que parecem não responder às abordagens tradicionais. Aqui, os sais são apresentados como microestruturas reguladoras da vida, responsáveis por viabilizar o metabolismo intracelular que sustenta a psique, a cognição e a autorregulação do organismo.",
         audience:
@@ -179,6 +180,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "constelacao-familiar",
         title: "Constelação Familiar Sistêmica e Hidroconstelação",
+        image: "/images/courses/constelacao-familiar.png",
         overview:
           "Este curso nasce da intersecção entre experiência clínica profunda, rigor conceitual e maturidade terapêutica. A formação foi desenhada para formar consteladores capazes de ler campos com precisão, sustentar movimentos complexos e atuar com ética, presença e clareza — mesmo diante de situações adversas, densas ou inesperadas. O curso se ancora nos fundamentos de Bert Hellinger, integrando o olhar de Brigitte Ribes e Vera Bassoi, além de contribuições contemporâneas que dialogam com a neurociência e a observação clínica refinada. Na Hidroconstelação, o curso se aprofunda na prática de constelação na água, onde os movimentos se dão por si só, impulsionados pelo próprio campo morfogenético. A água passa a ser compreendida como interface de leitura do campo, capaz de revelar padrões ocultos e dinâmicas psíquicas profundas.",
         audience:
@@ -270,6 +272,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "mapa-astrologico",
         title: "Mapa Astrológico – Caminho das Riquezas",
+        image: "/images/courses/mapa-astrologico.png",
         overview:
           "Existe uma diferença radical entre olhar um mapa astrológico e saber lê-lo como um campo de informações vivas. A maioria das leituras permanece na superfície: traços, tendências, descrições elegantes que até fazem sentido, mas não transformam. Este curso é uma formação terapêutica autoral, criada para ensinar o terapeuta a ler o mapa como um sistema de heranças, onde estão inscritos registros ancestrais, memórias do período intrauterino, vínculos familiares, padrões de prosperidade, travas financeiras, desafios profissionais e potenciais de expansão real. Aqui, o mapa deixa de ser simbólico no sentido raso e passa a ser um instrumento clínico de leitura profunda dos campos psíquicos e sistêmicos. Ninguém nasce \"bloqueado\" ou \"sem sorte\" — o que existe são códigos herdados, muitos inconscientes, que seguem operando enquanto não são vistos.",
         audience:
@@ -288,6 +291,7 @@ export const themes: Record<string, ThemeData> = {
       {
         id: "chave-mestra",
         title: "Chave Mestra dos Códigos Mentais",
+        image: "/images/courses/chave-mestra.png",
         overview:
           "Vivemos uma nova era terapêutica. O paciente contemporâneo não busca apenas escuta — busca clareza, precisão, direção e resultados reais. A Chave Mestra dos Códigos Mentais permite que, em uma única sessão, o terapeuta tenha acesso a uma leitura profunda e integrada do cliente, identificando com clareza emaranhamentos familiares e sistêmicos, engramas emocionais inconscientes, padrões repetitivos herdados da ancestralidade, feridas emocionais estruturais e desequilíbrios biofísicos, psicossomáticos e financeiros. O terapeuta que domina a Chave Mestra transforma a sessão inicial em um verdadeiro mapa terapêutico completo — algo raro e altamente valorizado no mercado atual.",
         audience:
