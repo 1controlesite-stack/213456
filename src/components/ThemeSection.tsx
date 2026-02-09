@@ -47,7 +47,7 @@ const ThemeSection = ({
 
         {/* Course cards grid */}
         <div ref={cardsReveal.ref} className={cn("mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 reveal-stagger", cardsReveal.isVisible && "visible")}>
-          {theme.courses.map(course => <Link key={course.id} to={`/${theme.slug}#${course.id}`} className="card-lift group overflow-hidden rounded-lg border border-border bg-card">
+          {theme.courses.map(course => <Link key={course.id} to={`/${theme.slug}/${course.id}`} className="card-lift group overflow-hidden rounded-lg border border-border bg-card">
               <div className="relative aspect-square w-full overflow-hidden bg-muted">
                 {course.image ? <>
                     <img src={course.image} alt="" className="absolute inset-0 h-full w-full scale-110 object-cover blur-xl opacity-60" aria-hidden="true" />

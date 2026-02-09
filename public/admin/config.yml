@@ -6,34 +6,40 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "courses"
-    label: "Cursos"
-    folder: "content/courses"
+  - name: "conteudos"
+    label: "Conteúdos / Cursos"
+    folder: "content/conteudos"
     create: true
     slug: "{{slug}}"
     extension: "json"
     fields:
-      - { label: "ID", name: "id", widget: "string" }
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Imagem", name: "image", widget: "image", required: false }
-      - { label: "Visão Geral", name: "overview", widget: "text" }
-      - { label: "Para quem é", name: "audience", widget: "text" }
-      - { label: "Aprendizados", name: "learnings", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
-      - { label: "Investimento", name: "investment", widget: "string" }
-      - { label: "Formato", name: "format", widget: "string" }
-
-  - name: "events"
-    label: "Eventos"
-    folder: "content/events"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    extension: "json"
-    fields:
-      - { label: "Título", name: "title", widget: "string" }
-      - { label: "Data", name: "date", widget: "datetime" }
-      - { label: "Descrição", name: "description", widget: "text" }
-      - { label: "Imagem", name: "image", widget: "image", required: false }
-      - { label: "Link de Inscrição", name: "link", widget: "string", required: false }
+      - { label: "Título", name: "title", widget: "string", required: true }
+      - { label: "Foto de Capa", name: "cover", widget: "image", required: true }
+      - { label: "Visão Geral", name: "visao_geral", widget: "text", required: true }
+      - { label: "Pra quem é", name: "pra_quem", widget: "text", required: true }
+      - label: "O que você aprenderá"
+        name: "aprendizado"
+        widget: "list"
+        required: true
+        field: { label: "Item", name: "item", widget: "string" }
+      - label: "Box de Informações"
+        name: "info_box"
+        widget: "object"
+        required: true
+        fields:
+          - { label: "Investimento", name: "investimento", widget: "string", required: true }
+          - { label: "Formato", name: "formato", widget: "string", required: true }
+          - { label: "Link - Garantir minha vaga", name: "link_vaga", widget: "string", required: true }
+          - { label: "Link - Tem dúvidas? Fale conosco", name: "link_contato", widget: "string", required: true }
+      - label: "Tema / Seção"
+        name: "tema"
+        widget: "select"
+        required: true
+        options:
+          - { label: "Homeopatia", value: "homeopatia" }
+          - { label: "Constelação", value: "constelacao" }
+          - { label: "Mapas", value: "mapas" }
+          - { label: "Eventos", value: "eventos" }
 
   - name: "settings"
     label: "Configurações"

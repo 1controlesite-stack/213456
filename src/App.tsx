@@ -9,6 +9,7 @@ import Homeopatia from "./pages/Homeopatia";
 import Constelacao from "./pages/Constelacao";
 import Mapas from "./pages/Mapas";
 import Eventos from "./pages/Eventos";
+import CourseDetail from "./pages/CourseDetail";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +25,7 @@ const AnimatedRoutes = () => {
         <Route path="/constelacao" element={<Constelacao />} />
         <Route path="/mapas" element={<Mapas />} />
         <Route path="/eventos" element={<Eventos />} />
+        <Route path="/:tema/:slug" element={<CourseDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
