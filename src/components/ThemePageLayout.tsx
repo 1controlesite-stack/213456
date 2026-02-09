@@ -67,10 +67,7 @@ const ThemePageLayout = ({ theme }: ThemePageLayoutProps) => {
           ref={heroReveal.ref}
           className={`container relative reveal ${heroReveal.isVisible ? "visible" : ""}`}
         >
-          <p className="font-amoresa text-xl text-gold">{theme.shortTitle}</p>
-          <h1 className="mt-2 font-serif text-4xl font-semibold text-primary md:text-5xl">
-            {theme.title}
-          </h1>
+          <h1 className="font-amoresa text-6xl text-gold md:text-7xl lg:text-8xl">{theme.shortTitle}</h1>
           <div className="gold-divider mt-4 w-24" />
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
             {theme.introduction}
