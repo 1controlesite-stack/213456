@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { getWhatsAppLink } from "@/data/courses";
-import { MessageCircle } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 const FinalCTA = () => {
@@ -38,7 +38,7 @@ const FinalCTA = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" />
             Falar pelo WhatsApp
           </a>
         </Button>

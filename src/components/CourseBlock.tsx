@@ -1,7 +1,8 @@
 import { Course, getWhatsAppLink } from "@/data/courses";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MessageCircle, HelpCircle } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
+import { HelpCircle } from "lucide-react";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
 interface CourseBlockProps {
@@ -114,7 +115,7 @@ const CourseBlock = ({ course }: CourseBlockProps) => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <MessageCircle className="h-4 w-4" />
+                  <WhatsAppIcon className="h-4 w-4" />
                   Garantir minha vaga
                 </a>
               </Button>

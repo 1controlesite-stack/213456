@@ -38,9 +38,9 @@ const ThemeSection = ({
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground whitespace-pre-line">
               {theme.description}
             </p>
-            <Link to={`/${theme.slug}`} className="gold-underline mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent transition-colors hover:text-accent/80 my-[15px] whitespace-nowrap">
-              Ver todas as formações
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            <Link to={`/${theme.slug}`} className="gold-underline mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent transition-colors hover:text-accent/80 my-[15px]">
+              <span className="whitespace-nowrap">Ver todas as formações</span>
+              <ArrowRight className="h-4 w-4 flex-shrink-0 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
         </div>

@@ -1,3 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /admin
+
 Sitemap: https://celiafranz.com.br/sitemap.xml
+
+# Crawl delay (sugestão, nem todos os bots respeitam)
+Crawl-delay: 1

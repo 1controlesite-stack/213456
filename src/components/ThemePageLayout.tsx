@@ -11,6 +11,13 @@ interface ThemePageLayoutProps {
   theme: ThemeData;
 }
 
+const seoKeywords: Record<string, string> = {
+  homeopatia: "homeopatia avançada, lantanídeos, sais de schüssler, miasmas, lac's homeopatia, portais matridonais, assinatura energética, curso homeopatia, formação homeopata",
+  constelacao: "constelação familiar sistêmica, hidroconstelação, movimento das riquezas, constelação familiar online, formação constelador, curso constelação familiar",
+  mapas: "mapa astrológico terapêutico, chave mestra códigos mentais, mapa astral terapêutico, curso mapa astrológico, leitura de mapa astral",
+  eventos: "eventos terapêuticos, palestras homeopatia, workshops terapia integrativa, aulas gratuitas terapia, agendamento terapia, Célia Franz eventos",
+};
+
 const ThemePageLayout = ({ theme }: ThemePageLayoutProps) => {
   const { hash } = useLocation();
   const heroReveal = useScrollReveal({ threshold: 0.1 });
@@ -37,7 +44,7 @@ const ThemePageLayout = ({ theme }: ThemePageLayoutProps) => {
     hasCourseInstance: theme.courses.map((course) => ({
       "@type": "CourseInstance",
       name: course.title,
-      description: course.overview,
+      description: course.overview.substring(0, 200),
       courseMode: course.format,
     })),
   };
@@ -49,6 +56,7 @@ const ThemePageLayout = ({ theme }: ThemePageLayoutProps) => {
         description={theme.seo.description}
         path={`/${theme.slug}`}
         schemaData={schemaData}
+        keywords={seoKeywords[theme.slug] || ""}
       />
 
       {/* Hero */}
