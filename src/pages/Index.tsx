@@ -20,7 +20,13 @@ const Index = () => {
       "Constelação Familiar Sistêmica",
       "Terapias Integrativas",
       "Formação de Terapeutas",
+      "Lantanídeos",
+      "Sais de Schüssler",
+      "Miasmas",
+      "Hidroconstelação",
+      "Mapa Astrológico Terapêutico",
     ],
+    sameAs: [],
   };
 
   return (
@@ -30,6 +36,7 @@ const Index = () => {
         description="Formações avançadas em homeopatia, constelação familiar, mapas terapêuticos e eventos com Célia Franz. Educação estruturada para terapeutas."
         path="/"
         schemaData={schemaData}
+        keywords="formação terapêutica, homeopatia avançada, constelação familiar, Célia Franz, lantanídeos, sais de schüssler, miasmas, hidroconstelação, mapa astrológico terapêutico, curso para terapeutas"
       />
 
       <HeroSection />

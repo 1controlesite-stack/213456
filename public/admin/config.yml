@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "courses"
+    label: "Cursos"
+    folder: "content/courses"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    fields:
+      - { label: "ID", name: "id", widget: "string" }
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Imagem", name: "image", widget: "image", required: false }
+      - { label: "Visão Geral", name: "overview", widget: "text" }
+      - { label: "Para quem é", name: "audience", widget: "text" }
+      - { label: "Aprendizados", name: "learnings", widget: "list", field: { label: "Item", name: "item", widget: "string" } }
+      - { label: "Investimento", name: "investment", widget: "string" }
+      - { label: "Formato", name: "format", widget: "string" }
+
+  - name: "events"
+    label: "Eventos"
+    folder: "content/events"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Data", name: "date", widget: "datetime" }
+      - { label: "Descrição", name: "description", widget: "text" }
+      - { label: "Imagem", name: "image", widget: "image", required: false }
+      - { label: "Link de Inscrição", name: "link", widget: "string", required: false }
+
+  - name: "settings"
+    label: "Configurações"
+    files:
+      - label: "Informações Gerais"
+        name: "general"
+        file: "content/settings/general.json"
+        fields:
+          - { label: "Número WhatsApp", name: "whatsapp", widget: "string" }
+          - { label: "URL do Site", name: "siteUrl", widget: "string" }
