@@ -42,23 +42,27 @@ const BiographyModal = ({ open, onOpenChange }: BiographyModalProps) => {
 
         {/* Conteúdo */}
         <ScrollArea className="max-h-[55vh]">
-          <div className="space-y-8 px-8 py-8">
+          <div className="px-6 py-6 sm:px-8 sm:py-8">
             {sections.map((section, i) => (
               <div key={section.content} className="group">
-                <div className="flex items-start gap-3">
-                  <span className="mt-1 block h-5 w-0.5 rounded-full bg-gold/40 transition-all duration-300 group-hover:h-full group-hover:bg-gold/70" />
-                  <div>
-                    <h3 className="font-serif text-lg font-semibold text-foreground">
+                <div className="flex gap-4">
+                  {/* Barra lateral decorativa */}
+                  <div className="relative flex flex-col items-center pt-1.5">
+                    <span className="block h-2 w-2 rounded-full bg-gold/50 transition-colors duration-300 group-hover:bg-gold" />
+                    {i < sections.length - 1 && (
+                      <span className="mt-1 block w-px flex-1 bg-border" />
+                    )}
+                  </div>
+
+                  <div className={`flex-1 ${i < sections.length - 1 ? "pb-7" : "pb-2"}`}>
+                    <h3 className="font-serif text-base font-semibold leading-snug text-foreground sm:text-lg">
                       {section.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <p className="mt-2.5 text-[0.8125rem] leading-[1.7] text-muted-foreground sm:text-sm sm:leading-[1.75]">
                       {biography[section.content]}
                     </p>
                   </div>
                 </div>
-                {i < sections.length - 1 && (
-                  <div className="gold-divider ml-6 mt-6" />
-                )}
               </div>
             ))}
           </div>
