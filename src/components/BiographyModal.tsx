@@ -58,9 +58,9 @@ const BiographyModal = ({ open, onOpenChange }: BiographyModalProps) => {
                     <h3 className="font-serif text-base font-semibold leading-snug text-foreground sm:text-lg">
                       {section.title}
                     </h3>
-                    <p className="mt-2.5 text-[0.8125rem] leading-[1.7] text-muted-foreground sm:text-sm sm:leading-[1.75]">
+                    <div className="mt-2.5 text-[0.8125rem] leading-[1.7] text-muted-foreground sm:text-sm sm:leading-[1.75] whitespace-pre-line">
                       {biography[section.content]}
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>
